@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--MembershipViewController-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController title="MembershipViewController" extendedLayoutIncludesOpaqueBars="YES" id="9pv-A4-QxB" customClass="CardViewController" customModule="AlumniAppSwift" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="roundedcard.png" translatesAutoresizingMaskIntoConstraints="NO" id="1V3-QR-ism">
+                                <rect key="frame" x="16" y="140" width="569" height="319"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="319" id="5s6-iP-cj1"/>
+                                </constraints>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHh-Bw-Urm">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Membership Card" id="pqa-fr-unW"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PHh-Bw-Urm" secondAttribute="trailing" id="Avl-vJ-hUp"/>
+                            <constraint firstItem="PHh-Bw-Urm" firstAttribute="centerX" secondItem="1V3-QR-ism" secondAttribute="centerX" id="CBk-Sk-R8l"/>
+                            <constraint firstItem="PHh-Bw-Urm" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="DEs-Fc-dFf"/>
+                            <constraint firstItem="1V3-QR-ism" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="Efo-RP-aSj"/>
+                            <constraint firstItem="PHh-Bw-Urm" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="WVU-ED-gNT"/>
+                            <constraint firstItem="1V3-QR-ism" firstAttribute="top" secondItem="PHh-Bw-Urm" secondAttribute="bottom" constant="76" id="nYo-zZ-M6l"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="zqb-aT-fjY"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <segue destination="843-jI-PXl" kind="popoverPresentation" identifier="ShowRegSegue" popoverAnchorView="PHh-Bw-Urm" id="vhJ-ku-1uC">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-366"/>
+        </scene>
+        <!--EventsUIViewController-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController title="EventsUIViewController" extendedLayoutIncludesOpaqueBars="YES" id="8rJ-Kc-sve" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBI-WV-P7e">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <connections>
+                                    <segue destination="teI-IA-NEh" kind="embed" id="wb4-eR-2jM"/>
+                                </connections>
+                            </containerView>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrp-3N-0uC">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <gestureRecognizers/>
+                                <items>
+                                    <navigationItem title="News &amp; Events" id="op7-qD-QVf">
+                                        <barButtonItem key="leftBarButtonItem" title="❮" width="12" id="bBP-9d-dEh">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="goBack" destination="4Nw-L8-lE0" id="2cj-bu-iPl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DBI-WV-P7e" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="1L6-T7-47g"/>
+                            <constraint firstItem="mrp-3N-0uC" firstAttribute="trailing" secondItem="DBI-WV-P7e" secondAttribute="trailing" id="Gn3-T7-mac"/>
+                            <constraint firstItem="mrp-3N-0uC" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="Kb1-9Q-XKq"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="DBI-WV-P7e" secondAttribute="bottom" id="Q6I-3M-Yha"/>
+                            <constraint firstItem="mrp-3N-0uC" firstAttribute="bottom" secondItem="DBI-WV-P7e" secondAttribute="top" id="ZnZ-k2-YGS"/>
+                            <constraint firstItem="mrp-3N-0uC" firstAttribute="leading" secondItem="DBI-WV-P7e" secondAttribute="leading" id="eT3-M9-GJD"/>
+                            <constraint firstItem="DBI-WV-P7e" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="44" id="gBV-aA-eoV"/>
+                            <constraint firstAttribute="trailing" secondItem="DBI-WV-P7e" secondAttribute="trailing" id="h8e-nx-Fcf"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="events" id="dNn-Zy-Cre"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="356"/>
+        </scene>
+        <!--AlumniTabViewController-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController title="AlumniTabViewController" extendedLayoutIncludesOpaqueBars="YES" id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="DSf-ae-25G" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="LbO-c8-v3l" kind="relationship" relationship="viewControllers" id="yxu-sH-Svj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-876" y="364"/>
+        </scene>
+        <!--DealsUIViewController-->
+        <scene sceneID="ScG-Gq-2OO">
+            <objects>
+                <viewController title="DealsUIViewController" extendedLayoutIncludesOpaqueBars="YES" id="LbO-c8-v3l" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qG6-Wa-uZ1"/>
+                        <viewControllerLayoutGuide type="bottom" id="mJb-8b-FJ2"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="b4m-xr-CdF">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLk-7P-93k">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <connections>
+                                    <segue destination="YMd-29-W8p" kind="embed" id="Fdl-z6-juQ"/>
+                                </connections>
+                            </containerView>
+                            <navigationBar multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJM-NN-Ce8">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <gestureRecognizers/>
+                                <items>
+                                    <navigationItem title="Deals &amp; Offers" id="StK-Sa-sjJ">
+                                        <barButtonItem key="leftBarButtonItem" title="❮" id="JRn-ei-W28">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="goBack" destination="AZf-zD-Df0" id="aDc-y6-5MH"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mJb-8b-FJ2" firstAttribute="top" secondItem="FLk-7P-93k" secondAttribute="bottom" id="6wf-6A-rLy"/>
+                            <constraint firstItem="DJM-NN-Ce8" firstAttribute="leading" secondItem="FLk-7P-93k" secondAttribute="leading" id="InX-sT-ARP"/>
+                            <constraint firstItem="FLk-7P-93k" firstAttribute="leading" secondItem="b4m-xr-CdF" secondAttribute="leading" id="TxE-jy-tbp"/>
+                            <constraint firstItem="DJM-NN-Ce8" firstAttribute="trailing" secondItem="FLk-7P-93k" secondAttribute="trailing" id="Z9i-5o-0tD"/>
+                            <constraint firstItem="DJM-NN-Ce8" firstAttribute="bottom" secondItem="FLk-7P-93k" secondAttribute="top" id="epd-IQ-jUQ"/>
+                            <constraint firstAttribute="trailing" secondItem="FLk-7P-93k" secondAttribute="trailing" id="kMX-8w-HLw"/>
+                            <constraint firstItem="FLk-7P-93k" firstAttribute="top" secondItem="qG6-Wa-uZ1" secondAttribute="bottom" constant="44" id="wec-yx-HHC"/>
+                            <constraint firstItem="DJM-NN-Ce8" firstAttribute="top" secondItem="qG6-Wa-uZ1" secondAttribute="bottom" id="xcC-Uh-FlR"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" title="Deals" image="deals" id="bF4-Hk-fFa"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZf-zD-Df0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1117"/>
+        </scene>
+        <!--DealsViewController-->
+        <scene sceneID="oI2-nE-W1N">
+            <objects>
+                <viewController title="DealsViewController" automaticallyAdjustsScrollViewInsets="NO" id="YMd-29-W8p" customClass="DealsViewController" customModule="AlumniAppSwift" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="srD-Ml-JYO"/>
+                        <viewControllerLayoutGuide type="bottom" id="LHm-0m-eSS"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="E7K-Jj-FaT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tDb-ni-wio">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="containerView" destination="tDb-ni-wio" id="rjq-gQ-7nY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMM-T4-Ypa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444" y="1128.5"/>
+        </scene>
+        <!--Registration-->
+        <scene sceneID="IXn-fD-36Y">
+            <objects>
+                <viewController storyboardIdentifier="RegistrationUIViewController" title="Registration" providesPresentationContextTransitionStyle="YES" id="843-jI-PXl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sqc-zm-7L5"/>
+                        <viewControllerLayoutGuide type="bottom" id="onb-kx-LIb"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="ZQB-wF-YfK">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvG-Zn-hkK">
+                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <connections>
+                                    <segue destination="mYU-PI-hQg" kind="embed" id="PTD-ly-Z1j"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DvG-Zn-hkK" firstAttribute="top" secondItem="Sqc-zm-7L5" secondAttribute="bottom" constant="8" symbolic="YES" id="0ae-ng-Hvb"/>
+                            <constraint firstItem="DvG-Zn-hkK" firstAttribute="leading" secondItem="ZQB-wF-YfK" secondAttribute="leading" id="1AY-yX-FEb"/>
+                            <constraint firstAttribute="trailing" secondItem="DvG-Zn-hkK" secondAttribute="trailing" id="1wV-DT-3ws"/>
+                            <constraint firstItem="DvG-Zn-hkK" firstAttribute="bottom" secondItem="onb-kx-LIb" secondAttribute="top" id="CNN-Vp-mBM"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="600" height="600"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbF-rd-nZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1455" y="-366"/>
+        </scene>
+        <!--EventsViewController-->
+        <scene sceneID="gUb-1x-7gh">
+            <objects>
+                <viewController title="EventsViewController" automaticallyAdjustsScrollViewInsets="NO" id="teI-IA-NEh" customClass="EventsViewController" customModule="AlumniAppSwift" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LsT-0d-3Ik"/>
+                        <viewControllerLayoutGuide type="bottom" id="rVP-MV-dYZ"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="x6G-Yx-73A">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lf8-0x-bRF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="containerView" destination="Lf8-0x-bRF" id="8o9-bX-Tvb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdM-l6-lOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1455" y="355.5"/>
+        </scene>
+        <!--My Card-->
+        <scene sceneID="KPp-9C-Uwm">
+            <objects>
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="DSf-ae-25G" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" title="My Card" image="creditcard" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="48v-Sx-3dl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="yn5-L7-wVU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D4R-Yq-sDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66" y="-366"/>
+        </scene>
+        <!--RegistrationViewController-->
+        <scene sceneID="ZTG-pb-8sw">
+            <objects>
+                <viewController title="RegistrationViewController" automaticallyAdjustsScrollViewInsets="NO" id="mYU-PI-hQg" customClass="RegistrationViewController" customModule="AlumniAppSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t9v-TP-HTV"/>
+                        <viewControllerLayoutGuide type="bottom" id="xnd-vg-iOv"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tNk-bH-Pf0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="572"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4EH-DE-EUH">
+                                <rect key="frame" x="0.0" y="-10" width="600" height="636"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4EH-DE-EUH" firstAttribute="top" secondItem="tNk-bH-Pf0" secondAttribute="topMargin" constant="-10" id="Q90-e5-ULM"/>
+                            <constraint firstAttribute="trailing" secondItem="4EH-DE-EUH" secondAttribute="trailing" id="aRp-He-0a3"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="4EH-DE-EUH" secondAttribute="bottom" constant="-54" id="qQm-Ie-NYN"/>
+                            <constraint firstItem="4EH-DE-EUH" firstAttribute="leading" secondItem="tNk-bH-Pf0" secondAttribute="leading" id="sfH-rj-9HZ"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="containerView" destination="4EH-DE-EUH" id="IQB-Ay-l3E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EV3-OF-gAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2186" y="-352"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="creditcard" width="32" height="32"/>
+        <image name="deals" width="32" height="32"/>
+        <image name="events" width="32" height="32"/>
+        <image name="roundedcard.png" width="944" height="529"/>
+    </resources>
+    <color key="tintColor" red="0.40392156862745099" green="0.7686274509803922" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+</document>
